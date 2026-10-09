@@ -1,0 +1,132 @@
+@keyframes burstCardIn {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-14deg);
+  }
+  45% {
+    opacity: 1;
+    transform: scale(1.1) rotate(12deg);
+  }
+  65% {
+    transform: scale(0.94) rotate(-8deg);
+  }
+  82% {
+    transform: scale(1.02) rotate(4deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes burstCardOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+}
+
+@keyframes sparklePop {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.4);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1);
+  }
+  70% {
+    opacity: 0.85;
+    transform: translateY(0) scale(0.85);
+  }
+  100% {
+    opacity: 0.35;
+    transform: translateY(2px) scale(0.5);
+  }
+}
+
+.layer {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.dim {
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 19, 37, 0.55);
+}
+
+.card {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  padding: 1.5rem 1.65rem 1.35rem;
+  background: #fff;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.18),
+    0 4px 12px rgba(0, 0, 0, 0.08);
+  animation:
+    burstCardIn 0.52s cubic-bezier(0.34, 1.45, 0.64, 1) forwards,
+    burstCardOut 0.24s ease-in 0.98s forwards;
+}
+
+.emoji {
+  font-size: 52px;
+  line-height: 1;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0b1020;
+  margin: 0 0 4px;
+}
+
+.tagline {
+  font-size: 13px;
+  color: #4b5563;
+  line-height: 1.45;
+  margin: 0 0 10px;
+}
+
+.sparkleRow {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.sparkle {
+  font-size: 18px;
+  font-weight: 700;
+  opacity: 0;
+  animation: sparklePop 0.48s ease-out forwards;
+}
+
+.sparkle:nth-child(1) {
+  color: #fbbf24;
+  animation-delay: 0.1s;
+}
+
+.sparkle:nth-child(2) {
+  color: #34d399;
+  animation-delay: 0.19s;
+}
+
+.sparkle:nth-child(3) {
+  color: #60a5fa;
+  animation-delay: 0.28s;
+}

@@ -1,0 +1,307 @@
+/* Guaranteed styles (do not rely on Tailwind JIT for layout / hero image). */
+
+.page {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 2.5rem 0.75rem;
+}
+
+@media (max-width: 639px) {
+  .page {
+    align-items: flex-start;
+    padding-top: 1.5rem;
+  }
+}
+
+.shell {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 430px;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+@media (min-width: 640px) {
+  .shell {
+    border-radius: 16px;
+  }
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  min-height: min(38vh, 280px);
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #071325;
+}
+
+@media (min-width: 640px) {
+  .hero {
+    min-height: 260px;
+  }
+}
+
+.heroPhoto {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.heroOverlay {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.heroContent {
+  position: relative;
+  padding: 3rem 1.5rem 1.25rem;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+@media (min-width: 640px) {
+  .heroContent {
+    padding-top: 3.5rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+.title {
+  margin: 0;
+  font-size: 1.65rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 2.125rem;
+  }
+}
+
+.subtitle {
+  margin: 0.5rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.formSection {
+  background-color: #e9eaee;
+  padding: 0.875rem 1rem 1.5rem;
+}
+
+/* Narrower track for fields + primary button on desktop web */
+.formInner {
+  width: 100%;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chipRow {
+  display: flex;
+  gap: 0.625rem;
+  margin-bottom: 0.875rem;
+}
+
+.chip {
+  flex: 1;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.15s,
+    color 0.15s;
+}
+
+.chipInactive {
+  background: #f5f5f5;
+  color: #111;
+}
+
+.chipActive {
+  background: #000;
+  color: #fff;
+}
+
+.formStack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 16px;
+  background: #f5f5f5;
+  padding: 1rem 1.125rem;
+  font-size: 1rem;
+  color: #111;
+}
+
+.input::placeholder {
+  color: #8c8c8c;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.12);
+}
+
+.primaryBtn {
+  width: 100%;
+  margin-top: 0.25rem;
+  border: none;
+  border-radius: 16px;
+  background: #000;
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.primaryBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.dividerRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: #b9bcc3;
+}
+
+.dividerOr {
+  font-size: 1rem;
+  color: #757b86;
+}
+
+.optionBtn {
+  width: 100%;
+  margin-bottom: 0.875rem;
+  border: none;
+  border-radius: 16px;
+  background: #f5f5f5;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: #111;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.optionBtn:hover {
+  background: #ebebeb;
+}
+
+.googleBtnWrap {
+  width: 100%;
+  margin-bottom: 0.875rem;
+  display: flex;
+  justify-content: center;
+}
+
+.optionIcon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.more {
+  margin: 0 0 0.75rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #111;
+}
+
+.legal {
+  margin: 0;
+  padding: 0 0.5rem;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #6d7179;
+}
+
+.fieldLabel {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.roleRow {
+  display: flex;
+  gap: 0.625rem;
+}
+
+.roleChip {
+  flex: 1;
+  border: 2px solid #e5e5e5;
+  border-radius: 16px;
+  padding: 0.875rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #f5f5f5;
+  color: #555;
+  cursor: pointer;
+  transition:
+    border-color 0.15s,
+    background-color 0.15s,
+    color 0.15s;
+}
+
+.roleChipOn {
+  border-color: #000;
+  background: #fff;
+  color: #000;
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: #5c5c5c;
+}
+
+.registerBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
