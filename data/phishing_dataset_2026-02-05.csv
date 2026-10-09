@@ -1,0 +1,7 @@
+ID,Message,Label,Added Date,Added By,Source
+1,"Your account has been suspended. Verify immediately: bit.ly/verify123",Phishing,2025-12-10,Admin,User Report
+2,"Your transaction of Rs. 5,000 was successful. Ref: TXN12345",Legitimate,2025-12-10,System,Bank SMS
+3,"URGENT: Click here to confirm your identity or account will be locked",Phishing,2025-12-09,Analyst,Public Dataset
+4,"Your OTP is 847293. Valid for 5 minutes.",Legitimate,2025-12-09,System,Bank SMS
+5,"Congratulations! You won Rs. 100,000. Claim now!",Phishing,2025-12-08,Admin,User Report
+6,"Your credit card payment is due on 15th Dec. Amount: Rs. 12,500",Legitimate,2025-12-08,System,Bank Email
